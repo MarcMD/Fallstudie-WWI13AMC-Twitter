@@ -1,0 +1,106 @@
+2015-05-21 21:34:49,684 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\pom.xml
+2015-05-21 21:34:53,918 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:gui-primefaces:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\pom.xml.
+2015-05-21 21:34:56,812 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gui-primefaces/src/main/java
+2015-05-21 21:34:56,813 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gui-primefaces/src/main/resources
+2015-05-21 21:34:56,814 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gui-primefaces/src/test/java
+2015-05-21 21:34:56,831 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:gui-primefaces:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\pom.xml.
+2015-05-21 21:35:02,205 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 12 sec
+2015-05-21 21:35:04,544 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:gui-primefaces:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\pom.xml.
+2015-05-21 21:35:05,026 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:35:05,049 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:35:05,064 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:35:05,065 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:35:08,834 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:35:08,838 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:35:08,843 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:35:08,844 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:35:58,003 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic\pom.xml.
+2015-05-21 21:35:58,219 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /business-logic/src/main/java
+2015-05-21 21:35:58,220 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /business-logic/src/main/resources
+2015-05-21 21:35:58,221 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /business-logic/src/test/java
+2015-05-21 21:35:58,221 [Worker-11] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /business-logic/src/test/resources
+2015-05-21 21:35:58,936 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic\pom.xml.
+2015-05-21 21:35:59,663 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:35:59,665 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:35:59,669 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:35:59,670 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:36:00,967 [Worker-15] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic\pom.xml.
+2015-05-21 21:36:01,716 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:36:01,718 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:36:01,720 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:36:01,722 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:36:50,882 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic-api:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic-api\pom.xml.
+2015-05-21 21:36:51,051 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /business-logic-api/src/main/java
+2015-05-21 21:36:51,051 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /business-logic-api/src/main/resources
+2015-05-21 21:36:51,052 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /business-logic-api/src/test/java
+2015-05-21 21:36:51,052 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /business-logic-api/src/test/resources
+2015-05-21 21:36:51,524 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic-api:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic-api\pom.xml.
+2015-05-21 21:36:51,844 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:36:51,846 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:36:51,857 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:36:51,859 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:36:52,338 [Worker-16] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic-api:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic-api\pom.xml.
+2015-05-21 21:36:52,941 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:36:52,942 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:36:52,945 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:36:52,946 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:39:18,784 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:gui-primefaces:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\pom.xml.
+2015-05-21 21:39:18,822 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for primefaces-sentinel:primefaces-sentinel:jar:1.1 is missing, no dependency information available
+2015-05-21 21:39:18,923 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for primefaces-sentinel:primefaces-sentinel:jar:1.1 is missing, no dependency information available
+2015-05-21 21:39:19,028 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:39:19,029 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:39:19,031 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:39:19,032 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:39:19,033 [Worker-13] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of gui-primefaces
+2015-05-21 21:39:19,034 [Worker-13] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for gui-primefaces
+2015-05-21 21:39:19,045 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:39:20,443 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for primefaces-sentinel:primefaces-sentinel:jar:1.1 is missing, no dependency information available
+2015-05-21 21:39:20,476 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:39:20,481 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:39:20,483 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:39:20,485 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:40:15,379 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:gui-primefaces:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\pom.xml.
+2015-05-21 21:40:15,780 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:15,782 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:40:15,783 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:15,784 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:40:15,785 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of gui-primefaces
+2015-05-21 21:40:15,785 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for gui-primefaces
+2015-05-21 21:40:15,789 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:17,092 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wwi13amc.twitter-api:business-logic-api:0.0.1-SNAPSHOT @ C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\business-logic-api\pom.xml.
+2015-05-21 21:40:17,151 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:17,153 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:40:17,156 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:17,158 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:40:17,305 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:17,306 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:40:17,307 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:17,308 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:40:56,925 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:56,927 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:40:56,930 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:40:56,931 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:43:37,005 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:43:37,007 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:43:37,008 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:43:37,010 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:44:19,616 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:19,620 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:44:19,635 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:19,637 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:44:25,651 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:25,653 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:44:25,656 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:25,658 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:44:43,863 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:43,873 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:44:43,877 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:43,878 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:44:56,208 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:56,210 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:44:56,211 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:44:56,212 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources
+2015-05-21 21:45:05,435 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:45:05,437 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-21 21:45:05,440 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-05-21 21:45:05,442 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\gui-primefaces\src\test\resources

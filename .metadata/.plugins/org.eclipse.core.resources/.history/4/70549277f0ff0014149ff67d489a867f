@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="gui-primefaces">
+        <property name="context-root" value="gui-primefaces"/>
+        <property name="java-output-path" value="/gui-primefaces/target/classes"/>
+    </wb-module>
+</project-modules>

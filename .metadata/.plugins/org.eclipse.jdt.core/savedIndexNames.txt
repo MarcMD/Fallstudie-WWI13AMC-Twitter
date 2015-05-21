@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\.metadata\.plugins\org.eclipse.jdt.core
+1038991559.index
+4053306887.index
+45682990.index
+1108496107.index
