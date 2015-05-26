@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+	
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css' />
+</h:head>
+
+<h:body>
+	<div class="container">
+		<div class="navbar">
+			<div class="nav">
+					<ul>
+						<li class="verticalLineRight"><a href="">Start</a></li>
+						<li class="marginLeft"><a href="">Airlines</a></li>
+					</ul>
+			</div>
+		</div>
+		<div class="page bg-blue">
+		<span>
+			<h1>Tweet Performance By Airline</h1>
+			<p:chart type="pie" model="#{TotalPerformance.model}" />
+		</span>
+		
+		</div>
+		<div class="page bg-orange">Test</div>
+	</div>
+</h:body>
+</html>

@@ -3,4 +3,12 @@
   <groupId>com.wwi13amc.twitter-api</groupId>
   <artifactId>business-logic-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  	<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.2</version>
+		</dependency>
+  </dependencies>
 </project>

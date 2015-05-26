@@ -1,0 +1,34 @@
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import org.primefaces.model.chart.PieChartModel;
+
+
+@ManagedBean(name="TotalPerformance")
+@RequestScoped
+public class TotalPerformance {
+	
+	public PieChartModel model;
+	
+	public TotalPerformance() {
+	model = new PieChartModel();
+    
+    model.set("Brand 1", 540);
+    model.set("Brand 2", 325);
+    model.set("Brand 3", 702);
+    model.set("Brand 4", 421);
+     
+    model.setTitle("Simple Pie");
+    model.setLegendPosition("w");
+	}
+
+	public PieChartModel getModel() {
+		return model;
+	}
+
+	public void setModel(PieChartModel model) {
+		this.model = model;
+	}
+	
+	
+}

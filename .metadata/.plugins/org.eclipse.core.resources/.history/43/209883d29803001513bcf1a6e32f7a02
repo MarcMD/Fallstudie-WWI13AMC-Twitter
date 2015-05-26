@@ -1,0 +1,36 @@
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import org.primefaces.model.chart.PieChartModel;
+
+
+@ManagedBean(name="TotalPerformance")
+@RequestScoped
+public class TotalPerformance {
+	
+	public PieChartModel model;
+	
+	public TotalPerformance() {
+	
+	}
+
+	public PieChartModel getModel() {
+		model = new PieChartModel();
+	    
+	    model.set("Lufthansa", 49);
+	    model.set("Condor", 31);
+	    model.set("SAS", 10);
+	    model.set("Other", 10);
+	     
+	    model.setTitle("Total Tweet Performance");
+	    model.setLegendPosition("w");
+	    
+	    return model;
+	}
+
+	public void setModel(PieChartModel model) {
+		this.model = model;
+	}
+	
+	
+}

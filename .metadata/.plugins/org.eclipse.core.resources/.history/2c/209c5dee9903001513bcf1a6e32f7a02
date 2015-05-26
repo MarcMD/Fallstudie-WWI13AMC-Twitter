@@ -1,0 +1,28 @@
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import org.primefaces.model.chart.PieChartModel;
+
+import com.wwi13amc.twitter_api.business_logic_api.chartObjects.PerformanceByAirline;
+
+
+@ManagedBean(name="PerformanceByAirline")
+@RequestScoped
+public class PerformanceByAirlineChart {
+	
+	public PieChartModel model;
+	
+	public PerformanceByAirlineChart() {
+		model = PerformanceByAirline.pieChart();
+	}
+
+	public PieChartModel getModel() {
+	   return model;
+	}
+
+	public void setModel(PieChartModel model) {
+		this.model = model;
+	}
+	
+	
+}

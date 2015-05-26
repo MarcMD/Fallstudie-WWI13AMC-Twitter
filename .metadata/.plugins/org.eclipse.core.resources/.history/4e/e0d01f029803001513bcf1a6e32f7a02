@@ -1,0 +1,17 @@
+
+public class TotalPerformance {
+	private static final long serialVersionUID = 1L;
+	
+	public PieChartModel model;
+	
+	public TotalPerformance() {
+	model = new PieChartModel();
+    
+    model.set("Brand 1", 540);
+    model.set("Brand 2", 325);
+    model.set("Brand 3", 702);
+    model.set("Brand 4", 421);
+     
+    model.setTitle("Simple Pie");
+    model.setLegendPosition("w");
+}

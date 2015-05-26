@@ -1,0 +1,19 @@
+package com.wwi13amc.twitter_api.business_logic_api.chartObjects;
+
+import org.primefaces.model.chart.PieChartModel;
+
+public class PerformanceByAirline {
+
+	public static PieChartModel pieChart() {
+		PieChartModel model = new PieChartModel();
+	    
+	    model.set("Lufthansa", 49);
+	    model.set("Condor", 31);
+	    model.set("SAS", 10);
+	    model.set("Other", 10);
+	     
+	    model.setLegendPosition("w");
+	    
+	    return model;
+	}
+}
