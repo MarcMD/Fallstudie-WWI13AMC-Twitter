@@ -1308,3 +1308,92 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-26 13:38:20.791
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2015-05-28 15:44:19.206 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/christiankegelmann/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data /Users/christiankegelmann/Fallstudie-WWI13AMC-Twitter -product org.eclipse.epp.package.jee.product -keyring /Users/christiankegelmann/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-05-28 15:44:21.171
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2015-05-28 15:44:21.613
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-05-28 15:44:23.991
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-05-28 15:44:23.991
+!MESSAGE A conflict occurred for ALT+COMMAND+Q P:
+Binding(ALT+COMMAND+Q P,
+	ParameterizedCommand(Command(org.eclipse.php.ui.explorer,PHP Script Explorer,
+		Shows the Script Explorer,
+		Category(org.eclipse.ui.category.views,Views,Commands for opening views,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47c422d3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+Binding(ALT+COMMAND+Q P,
+	ParameterizedCommand(Command(org.eclipse.ui.views.showView,Show View,
+		Shows a particular view,
+		Category(org.eclipse.ui.category.views,Views,Commands for opening views,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@382608d0,
+		[Lorg.eclipse.e4.ui.internal.workbench.Parameter;@3c468360,,true),[Lorg.eclipse.core.commands.Parameterization;@7841c990),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:44:27.118
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:44:27.147
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:44:28.533
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:44:28.564
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:45:37.230
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:45:37.256
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2015-05-28 15:48:25.403 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/christiankegelmann/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/christiankegelmann/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-05-28 15:48:29.362
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-05-28 15:48:29.803
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-05-28 15:48:29.803
+!MESSAGE A conflict occurred for ALT+COMMAND+Q P:
+Binding(ALT+COMMAND+Q P,
+	ParameterizedCommand(Command(org.eclipse.php.ui.explorer,PHP Script Explorer,
+		Shows the Script Explorer,
+		Category(org.eclipse.ui.category.views,Views,Commands for opening views,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49ea4b65,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+Binding(ALT+COMMAND+Q P,
+	ParameterizedCommand(Command(org.eclipse.ui.views.showView,Show View,
+		Shows a particular view,
+		Category(org.eclipse.ui.category.views,Views,Commands for opening views,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4af6839c,
+		[Lorg.eclipse.e4.ui.internal.workbench.Parameter;@4f3e65f4,,true),[Lorg.eclipse.core.commands.Parameterization;@7d1cfe97),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:48:36.368
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-28 15:48:36.397
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
