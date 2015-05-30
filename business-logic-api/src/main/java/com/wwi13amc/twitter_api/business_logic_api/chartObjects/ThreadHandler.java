@@ -56,7 +56,6 @@ public class ThreadHandler{
 	
 	class RemindTask extends TimerTask {
 		
-
 		public void run() {		   
 			
 			/**
