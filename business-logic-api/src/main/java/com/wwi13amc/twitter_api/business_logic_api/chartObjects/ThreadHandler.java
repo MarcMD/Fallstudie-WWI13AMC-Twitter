@@ -9,9 +9,13 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * @author christiankegelmann
+ *
+ */
 public class ThreadHandler{
 	
-	/* 
+	/** 
 	 * Notwendige Variablen werden deklariert.
 	 * 
 	 * @param timer Timer für zeitgesteuertes Event
@@ -25,7 +29,7 @@ public class ThreadHandler{
 	static ArrayList<Integer> array;
 	
 	
-	/*
+	/**
 	 * Konstruktor.
 	 * @param timer Erstellung zeitgesteuertes Event, Firerate 5 Sekunden
 	 * @param airlines Erstellung ArrayList<String> für Airline-Namen
@@ -52,7 +56,7 @@ public class ThreadHandler{
 	
 	class RemindTask extends TimerTask {
 		
-		/*
+		/**
 		 * Erstellung TimerTask für Timer, Firerate 5 Sek.
 		 * Angegebene Datei wird geöffnet, ausgelesen und beim Komma getrennt Dateiformat=(AIRLINE,VALUE).
 		 * Value wird zu Integer geparsed und in Array array geschrieben.

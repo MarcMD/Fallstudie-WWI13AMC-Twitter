@@ -39,7 +39,7 @@ public class TwitterMessageCrawler extends Thread{
 		memory = c;	 
 	}
 
-	/*
+	/**
 	 * Folgende Methode wird aufgerufen, damit der aktuelle Zählerstand in eine Datei geschrieben wird,
 	 * damit er vom ThreadHandler aus bearbeitet bzw. aufgerufen werdeb kann.
 	 * 
@@ -49,6 +49,15 @@ public class TwitterMessageCrawler extends Thread{
 	 */
 	
 	public void save(){
+		
+		/**
+		 * Folgende Methode wird aufgerufen, damit der aktuelle Zählerstand in eine Datei geschrieben wird,
+		 * damit er vom ThreadHandler aus bearbeitet bzw. aufgerufen werdeb kann.
+		 * 
+		 * @param pWriter Holder für den FileWriter
+		 * @param file Datei in die geschrieben wird
+		 * 
+		 */
 		
 		try{ 
 			 pWriter = new FileWriter(file);	       
@@ -63,7 +72,7 @@ public class TwitterMessageCrawler extends Thread{
 	}
 	
 	
-	/*
+	/**
 	 * Folgender Code kann gethreaded werden.
 	 * 
 	 * @param file Datei in die geschrieben wird
