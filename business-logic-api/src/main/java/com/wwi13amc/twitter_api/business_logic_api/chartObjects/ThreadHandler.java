@@ -56,20 +56,22 @@ public class ThreadHandler{
 	
 	class RemindTask extends TimerTask {
 		
-		/**
-		 * Erstellung TimerTask für Timer, Firerate 5 Sek.
-		 * Angegebene Datei wird geöffnet, ausgelesen und beim Komma getrennt Dateiformat=(AIRLINE,VALUE).
-		 * Value wird zu Integer geparsed und in Array array geschrieben.
-		 * Diese Schritte werden für jedes Element in der ArrayList airlines wiederholt.
-		 * 
-		 * @see java.util.TimerTask#run()
-		 * @param zeile Beinhaltet gelesene Zeile aus .txt-Dokument
-		 * @param werte Beinhaltet Elemente aus Zeile, gesplitted bei ","
-		 * @param zeilesplit Beinhaltet werte[1] als Integer
-		 * @param array  Beinhaltet die Zählerstande. airlines über Index mit array vernküpfbar.
-		 */
 
-		public void run() {		   	
+		public void run() {		   
+			
+			/**
+			 * Erstellung TimerTask für Timer, Firerate 5 Sek.
+			 * Angegebene Datei wird geöffnet, ausgelesen und beim Komma getrennt Dateiformat=(AIRLINE,VALUE).
+			 * Value wird zu Integer geparsed und in Array array geschrieben.
+			 * Diese Schritte werden für jedes Element in der ArrayList airlines wiederholt.
+			 * 
+			 * @see java.util.TimerTask#run()
+			 * @param zeile Beinhaltet gelesene Zeile aus .txt-Dokument
+			 * @param werte Beinhaltet Elemente aus Zeile, gesplitted bei ","
+			 * @param zeilesplit Beinhaltet werte[1] als Integer
+			 * @param array  Beinhaltet die Zählerstande. airlines über Index mit array vernküpfbar.
+			 */
+			
 			for (int i = 0; i < airlines.size(); i++){
 				try {
 					FileReader fr = new FileReader("src/main/java/CounterStorage"+airlines.get(i)+".txt");
