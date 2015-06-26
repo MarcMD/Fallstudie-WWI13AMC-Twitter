@@ -9,7 +9,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * der Methode getConnection kann auf eine Verbindung zugegriffen werden
  * 
  * Verbindungen sollten geschlossen werden, wenn sie nicht mehr benötigt werden:
- * connection.close();
+ * con.close();
  * 
  * @author MarcMD
  * 
@@ -18,6 +18,9 @@ public class DBConnectionPool {
 
 	private ComboPooledDataSource cpds = null;
 
+	/**
+	 * Kontruktor
+	 */
 	public DBConnectionPool() {
 
 		try {
