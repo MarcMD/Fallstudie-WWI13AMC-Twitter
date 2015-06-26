@@ -19,8 +19,8 @@ import com.twitter.hbc.httpclient.auth.OAuth1;
 public class TwitterMessageCrawler extends Thread{
 
 	File file;
-	private String one;
-	private String two;
+	private String airlineName;
+	private String airlineCode;
 	FileWriter pWriter;
 	int memory;
 	private String timeZone = "leer";
@@ -36,8 +36,8 @@ public class TwitterMessageCrawler extends Thread{
 	}
 		
 	public TwitterMessageCrawler(String a, String b, int c){
-		one = a;
-		two = b;
+		airlineName = a;
+		airlineCode = b;
 		memory = c;	 
 	}
 
@@ -63,7 +63,7 @@ public class TwitterMessageCrawler extends Thread{
 		
 		try{ 
 			 pWriter = new FileWriter(file);	       
-		     pWriter.write(""+one+","+mem.get()); 
+		     pWriter.write(""+airlineName+","+mem.get()); 
 		      	if (pWriter != null){ 
 		            pWriter.flush(); 
 		            pWriter.close(); 
@@ -80,14 +80,14 @@ public class TwitterMessageCrawler extends Thread{
 	 * @param file Datei in die geschrieben wird
 	 * @param mem LocalStorage für den Thread
 	 * @param memory Alter Zählerstand
-	 * @param one Erster übergebener Wert, nach dem im JSON-String gesucht werden soll
-	 * @param two Zweiter übergebener Wert, nach dem im JSON-String gesucht werden soll
+	 * @param airlineName Erster übergebener Wert, nach dem im JSON-String gesucht werden soll
+	 * @param airlineCode Zweiter übergebener Wert, nach dem im JSON-String gesucht werden soll
 	 * 
 	 * @see java.lang.Runnable#run()
 	 */
 	
 	public void run() {
-		file = new File("src/main/java/CounterStorage"+one+".txt");
+		file = new File("src/main/java/CounterStorage"+airlineName+".txt");
 		mem.set(memory);
 		
 		String consumerKey = "syuSUS1kjr5VbUpW04ANNxRhJ";
@@ -97,7 +97,7 @@ public class TwitterMessageCrawler extends Thread{
 		BlockingQueue<String> queue = new LinkedBlockingQueue<String>(10000);
 		StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
 		// add some track terms
-		endpoint.trackTerms(Lists.newArrayList(one, two));
+		endpoint.trackTerms(Lists.newArrayList(airlineName, airlineCode));
 
 		Authentication auth = new OAuth1(consumerKey, consumerSecret, token, secret);
 		// Authentication auth = new BasicAuth(username, password);
@@ -121,10 +121,10 @@ public class TwitterMessageCrawler extends Thread{
 			  *  
 			  */
 			String[] arr = msg.split(" ");
-			if (useList(arr, one) == true || useList(arr, two) == true){
+			if (useList(arr, airlineName) == true || useList(arr, airlineCode) == true){
 				 mem.set( mem.get() + 1 );
 				 save();
-				 System.out.println(one);
+				 System.out.println(airlineName);
 				 String[] arrTZ = msg.split(",");
 					String[] arrTS = arrTZ;
 					
@@ -143,13 +143,14 @@ public class TwitterMessageCrawler extends Thread{
 							String holder =hold2[1].replaceAll("\"", ""); 
 							holder = holder.split("}")[0]; 
 							
-							
 							identifier = holder;
 							
 							System.out.println(identifier);
 							
 						}
 					}
+					System.out.println(msg);
+					System.out.println("");
 			}
 						
 			

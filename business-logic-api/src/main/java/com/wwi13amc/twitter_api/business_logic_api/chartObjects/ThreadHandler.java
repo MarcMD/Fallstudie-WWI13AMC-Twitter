@@ -80,7 +80,7 @@ public class ThreadHandler{
 				    String werte[] = zeile.split(",");
 				    int zeilesplit = Integer.parseInt(werte[1]);
 				    array.set(i, zeilesplit);
-				    System.out.println(zeile+" Value= "+zeilesplit);
+//				    System.out.println(zeile+" Value= "+zeilesplit);
 				    reader.close();
 				     
 				} catch (FileNotFoundException e) {
@@ -95,6 +95,8 @@ public class ThreadHandler{
 	}
 	
 	public static void main(String[] args) {
+		
+		DBConnector connector = new DBConnector();
 	
 		new ThreadHandler();	
 		
