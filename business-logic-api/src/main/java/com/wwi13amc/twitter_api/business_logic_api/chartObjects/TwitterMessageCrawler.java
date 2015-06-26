@@ -23,11 +23,13 @@ public class TwitterMessageCrawler extends Thread{
 	private String two;
 	FileWriter pWriter;
 	int memory;
+	private String timeZone = "leer";
+	private String identifier = "leer";
 	
 	private static final ThreadLocal<Integer> mem = new ThreadLocal<Integer>()
 		{
 		@Override protected Integer initialValue() { return 0; }
-		};
+		}; 
 
 	public static boolean useList(String[] arr, String targetValue) {
 		return Arrays.asList(arr).contains(targetValue);
@@ -106,7 +108,7 @@ public class TwitterMessageCrawler extends Thread{
 		 // Establish a connection
 		client.connect();
 	
-		for (int msgRead = 0; msgRead < 1000; msgRead++) {
+		for (int msgRead = 0; msgRead < 1000000; msgRead++) {
 			String msg = null;
 			try {
 				msg = queue.take();
@@ -114,23 +116,46 @@ public class TwitterMessageCrawler extends Thread{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			 
 			 /*
 			  * In diesem Abschnitt wird die Nachricht aufgeteilt und bestimmte Elemente herausgesucht. Außerdem werden die entsprechenden Werte hochgezählt.
 			  *  
 			  */
 			String[] arr = msg.split(" ");
-			if (useList(arr, one) == true){
+			if (useList(arr, one) == true || useList(arr, two) == true){
 				 mem.set( mem.get() + 1 );
 				 save();
-				 System.out.println(one);				 
+				 System.out.println(one);
+				 String[] arrTZ = msg.split(",");
+					String[] arrTS = arrTZ;
+					
+					for (int i = 0; i < arrTZ.length; i++){
+						if (arrTZ[i].contains("time_zone")){
+							String[] hold = arrTZ[i].split(":");
+							timeZone = hold[1].replaceAll("\"", "");
+							
+							System.out.println(timeZone);
+						
+						}
+					}
+					for (int i = 0; i < arrTS.length; i++){
+						if (arrTS[i].contains("timestamp")){
+							String[] hold2 = arrTS[i].split(":");
+							String holder =hold2[1].replaceAll("\"", ""); 
+							holder = holder.split("}")[0]; 
+							
+							
+							identifier = holder;
+							
+							System.out.println(identifier);
+							
+						}
+					}
 			}
-			else if (useList(arr, two) == true){
-				mem.set( mem.get() + 1 );
-				save();
-				System.out.println(two);				 
-			 }			
+						
+			
+	
 		}
+
 		client.stop();		
 	}
 }
