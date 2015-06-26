@@ -3,6 +3,9 @@ package com.wwi13amc.twitter_api.business_logic_api.chartObjects;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Arrays;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -26,6 +29,8 @@ public class TwitterMessageCrawler extends Thread{
 	private String timeZone = "leer";
 	private String identifier = "leer";
 	
+	private DBConnectionPool connector;
+	
 	private static final ThreadLocal<Integer> mem = new ThreadLocal<Integer>()
 		{
 		@Override protected Integer initialValue() { return 0; }
@@ -39,6 +44,8 @@ public class TwitterMessageCrawler extends Thread{
 		airlineName = a;
 		airlineCode = b;
 		memory = c;	 
+		//Ein Pool von Connections
+		connector = new DBConnectionPool();
 	}
 
 	/**
@@ -73,6 +80,20 @@ public class TwitterMessageCrawler extends Thread{
 		    } 
 	}
 	
+	public void writeToDB() {
+		String sql = "INSERT INTO fallstudie.TWEETS (TIMESTAMP, COUNTRY, AIRLINE) VALUES ('"+identifier+"', '"+timeZone+"', '"+airlineCode.substring(1)+"');";
+		try {
+			Connection con = connector.getConnection();
+			Statement statement = con.createStatement();
+			statement.execute(sql);		
+			statement.close();
+			con.close();
+			System.out.println(identifier + " " + timeZone + "XX wurde geschrieben");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	/**
 	 * Folgender Code kann gethreaded werden.
@@ -87,6 +108,7 @@ public class TwitterMessageCrawler extends Thread{
 	 */
 	
 	public void run() {
+		
 		file = new File("src/main/java/CounterStorage"+airlineName+".txt");
 		mem.set(memory);
 		
@@ -151,6 +173,8 @@ public class TwitterMessageCrawler extends Thread{
 					}
 					System.out.println(msg);
 					System.out.println("");
+					this.writeToDB();
+									
 			}
 						
 			

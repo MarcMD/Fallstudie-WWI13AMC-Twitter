@@ -95,17 +95,22 @@ public class ThreadHandler{
 	}
 	
 	public static void main(String[] args) {
-		
-		DBConnector connector = new DBConnector();
-	
+			
 		new ThreadHandler();	
 		
 		TwitterMessageCrawler test4 = new TwitterMessageCrawler(airlines.get(0),"#LH", array.get(0));
 		TwitterMessageCrawler test = new TwitterMessageCrawler(airlines.get(1),"#4U", array.get(1));
 		TwitterMessageCrawler test2 = new TwitterMessageCrawler(airlines.get(2),"#AF", array.get(2));
+		TwitterMessageCrawler test3 = new TwitterMessageCrawler("United", "#UA", 0);
+		TwitterMessageCrawler test5 = new TwitterMessageCrawler("British", "#BA", 0);
+
 		
-		test4.start();
-		test.start();
-		test2.start();		
+		
+		//test4.start();
+		//test.start();
+		test2.start();	
+		test3.start();
+		test5.start();
+		
 	}			  
 }
