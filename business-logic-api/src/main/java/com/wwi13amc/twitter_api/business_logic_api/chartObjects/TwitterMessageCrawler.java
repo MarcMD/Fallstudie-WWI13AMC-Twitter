@@ -117,7 +117,7 @@ public class TwitterMessageCrawler extends Thread{
 	 * in die die Datenbank
 	 */
 	public void save() {
-		String sql = "INSERT INTO fallstudie.TWEETS (TIMESTAMP, COUNTRY, AIRLINE) " +
+		String sql = "INSERT INTO fallstudie.TWEETS (ID, TIMEZONE, AIRLINE) " +
 				"VALUES ('"+identifier+"', '"+timeZone+"', '"+airlineCode.substring(1)+"');";
 		try {
 			Connection con = connector.getConnection();
@@ -125,7 +125,7 @@ public class TwitterMessageCrawler extends Thread{
 			statement.execute(sql);		
 			statement.close();
 			con.close();
-			System.out.println("Datenbankeintrag erfolgreich: " +identifier + " " + timeZone + " wurde geschrieben");
+			System.out.println("Datenbankeintrag erfolgreich: " +identifier + " " + timeZone + " " + airlineCode.substring(1) + " wurde geschrieben");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
