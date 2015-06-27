@@ -24,7 +24,6 @@ public class TwitterMessageCrawler extends Thread{
 	private String identifier = "leer";
 	
 	private DBConnectionPool connector;
-	private TimezoneConverter converter;
 	
 	public static boolean useList(String[] arr, String targetValue) {
 		return Arrays.asList(arr).contains(targetValue);
@@ -89,7 +88,6 @@ public class TwitterMessageCrawler extends Thread{
 					if (arrTZ[i].contains("time_zone")){
 						String[] hold = arrTZ[i].split(":");
 						timeZone = hold[1].replaceAll("\"", "");
-						timeZone = converter.convert(timeZone);
 						System.out.println(timeZone);
 					
 					}
