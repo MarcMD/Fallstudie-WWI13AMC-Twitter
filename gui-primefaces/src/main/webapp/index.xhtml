@@ -16,45 +16,46 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-          <a class="navbar-brand" href="#">Twitter Airline Analyse</a>
+          <div class="navbar-brand">Twitter Airline Analyse</div>
     </div>
    </div>
   </nav>
-    
-	<p:tabView dynamic="true" cache="true">
-		<p:tab title="Airlines betrachten">
-		<h:form>
-			<h:panelGrid columns="2" cellpadding="10">
-				<p:chart type="pie" model="#{AirlineModel.airlineModel}"
-					style="width:400px;height:300px" id="pie1" />
-
-				<p:selectOneMenu id="region-dropdown-pie1"
-					value="#{AirlineModel.selectedCountry}" effect="fold"
-					editable="false">
-					<f:selectItem itemLabel="Alle Airlines" itemValue="" />
-					<f:selectItems value="#{AirlineModel.dropdown}" />
-					<p:ajax event="change" listener="#{AirlineModel.updateChart}"
-						update="pie1" />
-				</p:selectOneMenu>
-			</h:panelGrid>
-		</h:form>
-		</p:tab>
-		<p:tab title="Regionen betrachten">
-		<h:form>
-			<h:panelGrid columns="2" cellpadding="10">
-				<p:chart type="pie" model="#{RegionModel.airlineModel}"
-					style="width:400px;height:300px" id="pie2" />
-
-				<p:selectOneMenu id="region-dropdown-pie2"
-					value="#{RegionModel.selectedCountry}" effect="fold"
-					editable="false">
-					<p:ajax listener="#{RegionModel.updateChart}" update="pie2" />
-					<f:selectItem itemLabel="Alle Airlines" itemValue="" />
-					<f:selectItems value="#{RegionModel.dropdown}" />
-				</p:selectOneMenu>
-			</h:panelGrid>
-		</h:form>
-		</p:tab>
-	</p:tabView>
+    <div class="bg-color-2">
+		<p:tabView dynamic="true" cache="true">
+			<p:tab title="Airlines betrachten">
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:chart type="pie" model="#{AirlineModel.airlineModel}"
+						style="width:400px;height:300px" id="pie1" />
+	
+					<p:selectOneMenu id="region-dropdown-pie1"
+						value="#{AirlineModel.selectedCountry}" effect="fold"
+						editable="false">
+						<f:selectItem itemLabel="Alle Airlines" itemValue="" />
+						<f:selectItems value="#{AirlineModel.dropdown}" />
+						<p:ajax event="change" listener="#{AirlineModel.updateChart}"
+							update="pie1" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+			</h:form>
+			</p:tab>
+			<p:tab title="Regionen betrachten">
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:chart type="pie" model="#{RegionModel.airlineModel}"
+						style="width:400px;height:300px" id="pie2" />
+	
+					<p:selectOneMenu id="region-dropdown-pie2"
+						value="#{RegionModel.selectedCountry}" effect="fold"
+						editable="false">
+						<p:ajax listener="#{RegionModel.updateChart}" update="pie2" />
+						<f:selectItem itemLabel="Alle Airlines" itemValue="" />
+						<f:selectItems value="#{RegionModel.dropdown}" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+			</h:form>
+			</p:tab>
+		</p:tabView>
+	</div>
 </h:body>
 </html>

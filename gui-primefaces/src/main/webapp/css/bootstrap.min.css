@@ -9,6 +9,10 @@
  	background-color:#55acee;
  }
  
- .navbar-brand a { 
- 	background
+ .navbar-brand { 
+ 	color:white;
+ }
+ 
+ .bg-color-2 {
+ 	background-color:#ccd6dd;
  }
