@@ -1,5 +1,6 @@
 package com.fallstudie_wwi13amc_twitter.gui_primefaces.view;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import org.primefaces.model.chart.PieChartModel;
 
 import com.fallstudie_wwi13amc_twitter.gui_primefaces.util.HashMapToDropdownMap;
 import com.fallstudie_wwi13amc_twitter.gui_primefaces.util.HashMapToModel;
+import com.wwi13amc.twitter_api.business_logic_api.chartObjects.ObjectCreator;
 import com.wwi13amc.twitter_api.business_logic_api.mockUpData.HashMapMockUp;
 
 @ManagedBean(name="RegionModel")
@@ -49,28 +51,39 @@ public class RegionModel {
 	public void init() {
 		
 		// Erhalt der HashMap vom Backend
-		HashMap<String, Integer> hashMapFromBackend = HashMapMockUp.getHashMap();
-		
-		// Umwandlung der HashMap in ein PieChartmodel
-		PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
-		hashMapToPieChartModel.setLegendPosition("w");
-		airlineModel = new PieChartModel();
-		setAirlineModel(hashMapToPieChartModel);
-		
-		// Umwandlung der HashMap in eine Map mit dem Format Map<String, String>
-		Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
-		setDropdown(hashMapToDropdownMap);
+		HashMap<String, Integer> hashMapFromBackend;
+		try {
+			hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
+			// Umwandlung der HashMap in ein PieChartmodel
+			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
+			hashMapToPieChartModel.setLegendPosition("w");
+			airlineModel = new PieChartModel();
+			setAirlineModel(hashMapToPieChartModel);
+			
+			// Umwandlung der HashMap in eine Map mit dem Format Map<String, String>
+			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
+			setDropdown(hashMapToDropdownMap);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void updateChart() {
-		HashMap<String, Integer> hashMapFromBackend = HashMapMockUp.getHashMapForAirline(getSelectedCountry());
-		PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
-		hashMapToPieChartModel.setLegendPosition("w");
-		airlineModel = new PieChartModel();
-		setAirlineModel(hashMapToPieChartModel);
+		HashMap<String, Integer> hashMapFromBackend;
+		try {
+			hashMapFromBackend = ObjectCreator.getHashMapforAirline(getSelectedCountry());
+			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
+			hashMapToPieChartModel.setLegendPosition("w");
+			airlineModel = new PieChartModel();
+			setAirlineModel(hashMapToPieChartModel);
+			
+			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
+			setDropdown(hashMapToDropdownMap);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
-		setDropdown(hashMapToDropdownMap);
 	}
 	
 	
