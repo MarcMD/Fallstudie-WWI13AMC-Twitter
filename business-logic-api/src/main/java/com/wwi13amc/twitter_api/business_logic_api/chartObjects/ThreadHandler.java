@@ -15,7 +15,7 @@ public class ThreadHandler{
 	 * 
 	 */
 	
-	static ArrayList<String> airlines;
+	static String[] airlinesArray;
 	
 	
 	/**
@@ -26,22 +26,21 @@ public class ThreadHandler{
 	
 	public ThreadHandler(){
 		
-		airlines = new ArrayList<String>();
-		airlines.add("Lufthansa");
-		airlines.add("Germanwings");
-		airlines.add("Air France");
+		airlinesArray = new String[] {"Lufthansa", "#LH", "Germanwings", "#4U", "Austrian Airlines",
+				"#OS", "Brussels Airlines", "#SN", "United Airlines", "#UA", "Air Canada", "#AC", 
+				"Air Berlin", "#AB", "KLM Royal Dutch Airlines", "#KL", "British Airways", "#BA", "Swiss International Air Lines", "#LX"};
+		
+	
+		
 	}
 		
 	public static void main(String[] args) {
 			
 		new ThreadHandler();	
 		
-		TwitterMessageCrawler test4 = new TwitterMessageCrawler(airlines.get(0),"#LH");
-		TwitterMessageCrawler test = new TwitterMessageCrawler(airlines.get(1),"#4U");
-		TwitterMessageCrawler test2 = new TwitterMessageCrawler(airlines.get(2),"#AF");
+		TwitterMessageCrawler CrawlerLH = new TwitterMessageCrawler(airlinesArray);
 		
-		test4.start();
-		test.start();
-		test2.start();			
+		CrawlerLH.start();
+		
 	}			  
 }
