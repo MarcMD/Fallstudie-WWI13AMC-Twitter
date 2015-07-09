@@ -8,11 +8,11 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
-.loadpath
+# .settings/
+# .loadpath
 
 # Eclipse Core
-.project
+# .project
 
 # External tool builders
 .externalToolBuilders/
@@ -30,7 +30,7 @@ local.properties
 .factorypath
 
 # PDT-specific
-.buildpath
+# .buildpath
 
 # sbteclipse plugin
 .target
