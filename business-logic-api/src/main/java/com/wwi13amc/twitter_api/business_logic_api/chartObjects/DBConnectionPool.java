@@ -33,7 +33,7 @@ public class DBConnectionPool {
 
 			cpds.setMinPoolSize(3);
 			cpds.setAcquireIncrement(5);
-			cpds.setMaxPoolSize(20);
+			cpds.setMaxPoolSize(70);
 			
 		} catch (PropertyVetoException e) {
 			e.printStackTrace();
