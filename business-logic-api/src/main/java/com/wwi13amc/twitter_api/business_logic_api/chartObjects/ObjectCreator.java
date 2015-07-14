@@ -77,5 +77,43 @@ public class ObjectCreator {
 		return anzahlTweetsEinerAirlineProLand;
 		}
 	}
-
+	
+	public static HashMap<String, Integer> getHashMapforCountry(String country) throws SQLException{
+		
+		HashMap<String, Integer> anzahlTweetsEinesLandesProAirline= new HashMap<String, Integer>();
+		
+		DBConnectionPool DBConnection= new DBConnectionPool();
+		Connection con = DBConnection.getConnection();
+		Statement statement = con.createStatement();
+		
+		if(country.equals("Alle Länder")){
+			String sqlQuery= "SELECT COUNT(*) AS COUNTER, AIRLINE FROM TWEETS_BY_COUNTRY GROUP BY AIRLINE ORDER BY COUNTER DESC";
+			
+			ResultSet rs = statement.executeQuery(sqlQuery);
+			
+			while(rs.next())
+			{
+				anzahlTweetsEinesLandesProAirline.put(rs.getString("COUNTRY"), rs.getInt("COUNTER"));
+			}
+			
+			return anzahlTweetsEinesLandesProAirline;
+			
+		}
+		
+		else{
+		String sqlQuery= "SELECT COUNT(*) AS COUNTER, AIRLINE FROM TWEETS_BY_COUNTRYWHERE COUNTRY='"+ country+ "'GROUP BY AIRLINE ORDER BY COUNTER DESC";
+		
+		ResultSet rs = statement.executeQuery(sqlQuery);
+		
+		while(rs.next())
+		{
+			anzahlTweetsEinesLandesProAirline.put(rs.getString("COUNTRY"), rs.getInt("COUNTER"));
+		}
+		
+		return anzahlTweetsEinesLandesProAirline;
+		}
+	}
+		
 }
+
+
