@@ -13,6 +13,8 @@ import org.primefaces.model.chart.PieChartModel;
 import com.fallstudie_wwi13amc_twitter.gui_primefaces.util.HashMapToDropdownMap;
 import com.fallstudie_wwi13amc_twitter.gui_primefaces.util.HashMapToModel;
 import com.wwi13amc.twitter_api.business_logic_api.chartObjects.ObjectCreator;
+import com.wwi13amc.twitter_api.business_logic_api.chartObjects.ThreadHandler;
+import com.wwi13amc.twitter_api.business_logic_api.chartObjects.TwitterMessageCrawler;
 import com.wwi13amc.twitter_api.business_logic_api.mockUpData.HashMapMockUp;
 
 @ManagedBean(name="AirlineModel")
@@ -49,9 +51,11 @@ public class AirlineModel {
 	
 	@PostConstruct 
 	public void init() {
-		System.out.println("Bin in der Init.");
-		try {
-			HashMap<String, Integer> hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
+		// try {
+			HashMap<String, Integer> hashMapFromBackend;
+									
+		// 	hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
+	hashMapFromBackend = HashMapMockUp.getHashMap();
 			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
 			hashMapToPieChartModel.setLegendPosition("w");
 			airlineModel = new PieChartModel();
@@ -59,10 +63,10 @@ public class AirlineModel {
 			
 			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
 			setDropdown(hashMapToDropdownMap);
-		}
-		catch(SQLException e) { 
-			System.out.println("Fehler in der Init-Datei - SQLException: "+e.getMessage());
-		}
+		// }
+//		catch(SQLException e) { 
+//			System.out.println("Fehler in der Init-Datei der Klasse AirlineModel.java - SQLException: "+e.getMessage());
+//		}
 	}
 	
 	public void updateChart() {

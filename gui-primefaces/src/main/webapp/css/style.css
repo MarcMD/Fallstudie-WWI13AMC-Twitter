@@ -30,6 +30,9 @@ html, body {
 }
 
 
+}
+
+
 .nav ul {
 	list-style-type:none;
 	margin:0; 
@@ -83,4 +86,8 @@ color: #adaad5;
 	height:100%; 
 	padding: 5% 10% 5% 10%;
 	border-style:1px solid black;
+}
+
+#tab {
+	   background-color:yellow;
 }

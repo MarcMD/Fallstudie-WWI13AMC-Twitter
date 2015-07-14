@@ -52,8 +52,9 @@ public class RegionModel {
 		
 		// Erhalt der HashMap vom Backend
 		HashMap<String, Integer> hashMapFromBackend;
-		try {
-			hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
+//		try {
+			// hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
+		hashMapFromBackend = HashMapMockUp.getHashMap();
 			// Umwandlung der HashMap in ein PieChartmodel
 			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
 			hashMapToPieChartModel.setLegendPosition("w");
@@ -63,9 +64,9 @@ public class RegionModel {
 			// Umwandlung der HashMap in eine Map mit dem Format Map<String, String>
 			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
 			setDropdown(hashMapToDropdownMap);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		 }
 	}
 	
 	public void updateChart() {

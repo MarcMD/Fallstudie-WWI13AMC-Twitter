@@ -16,3 +16,15 @@
  .bg-color-2 {
  	background-color:#ccd6dd;
  }
+ 
+ .bg-color-tab {
+ 	background-color:black;
+ }
+ 
+ body {
+ 	 	background-color:#ccd6dd;
+ }
+ 
+.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-state-highlight {
+    background: #55acee;
+}
