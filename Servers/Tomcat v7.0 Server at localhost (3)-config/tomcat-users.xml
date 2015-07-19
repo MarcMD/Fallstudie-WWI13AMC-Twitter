@@ -14,20 +14,22 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
---><!-- The contents of this file will be loaded for each web application --><Context>
-
-    <!-- Default set of monitored resources -->
-    <WatchedResource>WEB-INF/web.xml</WatchedResource>
-
-    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
-    <!--
-    <Manager pathname="" />
-    -->
-
-    <!-- Uncomment this to enable Comet connection tacking (provides events
-         on session expiration as well as webapp lifecycle) -->
-    <!--
-    <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
-    -->
-
-</Context>
+--><tomcat-users>
+<!--
+  NOTE:  By default, no user is included in the "manager-gui" role required
+  to operate the "/manager/html" web application.  If you wish to use this app,
+  you must define such a user - the username and password are arbitrary.
+-->
+<!--
+  NOTE:  The sample user and role entries below are wrapped in a comment
+  and thus are ignored when reading this file. Do not forget to remove
+  <!.. ..> that surrounds them.
+-->
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+-->
+</tomcat-users>

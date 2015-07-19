@@ -8,11 +8,11 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
-.loadpath
+# .settings/
+# .loadpath
 
 # Eclipse Core
-.project
+# .project
 
 # External tool builders
 .externalToolBuilders/
@@ -24,13 +24,13 @@ local.properties
 .cproject
 
 # JDT-specific (Eclipse Java Development Tools)
-.classpath
+# .classpath
 
 # Java annotation processor (APT)
 .factorypath
 
 # PDT-specific
-.buildpath
+# .buildpath
 
 # sbteclipse plugin
 .target
