@@ -52,10 +52,17 @@ public class AirlineModel {
 	@PostConstruct 
 	public void init() {
 		// try {
-			HashMap<String, Integer> hashMapFromBackend;
+			HashMap<String, Integer> hashMapFromBackend = null;
 									
-		// 	hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
-	hashMapFromBackend = HashMapMockUp.getHashMap();
+		
+			try {
+				hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				System.out.println("SQL Fehler: " +e.getMessage()); 
+				e.printStackTrace();
+			}
+	// hashMapFromBackend = HashMapMockUp.getHashMap();
 			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
 			hashMapToPieChartModel.setLegendPosition("w");
 			airlineModel = new PieChartModel();
