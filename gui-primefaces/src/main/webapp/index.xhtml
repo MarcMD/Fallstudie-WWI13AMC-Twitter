@@ -1,32 +1,60 @@
-<!DOCTYPE html>
+		<!DOCTYPE html>
 <html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
-	<h:head>
-	
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css' />
+<h:head>
+
+	<title>Twitter Airline Analyzer</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800'
+		rel='stylesheet' type='text/css' />
 </h:head>
 
 <h:body>
-	<div class="container">
-		<div class="navbar">
-			<div class="nav">
-					<ul>
-						<li class="verticalLineRight"><a href="">Start</a></li>
-						<li class="marginLeft"><a href="">Airlines</a></li>
-					</ul>
-			</div>
-		</div>
-		<div class="page bg-blue">
-		<span>
-			<h1>Tweet Performance By Airline</h1>
-			<p:chart type="pie" model="#{PerformanceByAirlineChart.model}" />
-		</span>
-		
-		</div>
-		<div class="page bg-orange">Test</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+     <div class="navbar-brand" title="Twitter Airline Analyzer"><img src="img/twitter_logo.png" height="35px" width="35px" style=" display:inline-block"/></div><h1 style="color:white;  display:inline-block;">Twitter Airline Analyzer</h1></div>
+    </div>
+  </nav>
+    <div>
+		<p:tabView dynamic="true" cache="true">
+			<p:tab title="Airlines betrachten" titleStyleClass="bg-color-tab">
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:chart type="pie" model="#{AirlineModel.airlineModel}"
+						style="width:400px;height:300px" id="pie1" responsive="true" />
+	
+					<p:selectOneMenu id="region-dropdown-pie1"
+						value="#{AirlineModel.selectedCountry}" effect="fold"
+						editable="false" styleClass="menu" panelStyleClass="panel">
+						<f:selectItem itemLabel="Alle Airlines" itemValue="" />
+						<f:selectItems value="#{AirlineModel.dropdown}" />
+						<p:ajax event="change" listener="#{AirlineModel.updateChart}"
+							update="pie1" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+			</h:form>
+			</p:tab>
+			<p:tab title="Regionen betrachten"  titleStyleClass="bg-color-tab">
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="11">
+					<p:chart type="pie" model="#{RegionModel.airlineModel}"
+						style="width:400px;height:300px" id="pie2" responsive="true" />
+	
+					<p:selectOneMenu id="region-dropdown-pie2"
+						value="#{RegionModel.selectedCountry}" effect="fold"
+						editable="false">
+						<p:ajax listener="#{RegionModel.updateChart}" update="pie2" />
+						<f:selectItem itemLabel="Alle Airlines" itemValue="" />
+						<f:selectItems value="#{RegionModel.dropdown}" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+			</h:form>
+			</p:tab>
+		</p:tabView>
 	</div>
 </h:body>
 </html>
