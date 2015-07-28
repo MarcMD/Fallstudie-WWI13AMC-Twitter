@@ -52,27 +52,30 @@ public class RegionModel {
 		
 		// Erhalt der HashMap vom Backend
 		HashMap<String, Integer> hashMapFromBackend;
-//		try {
-			// hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
-		hashMapFromBackend = HashMapMockUp.getHashMap();
+		try {
+			hashMapFromBackend = ObjectCreator.getHashMapforCountry("Weltweit");
 			// Umwandlung der HashMap in ein PieChartmodel
 			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
 			hashMapToPieChartModel.setLegendPosition("w");
 			airlineModel = new PieChartModel();
 			setAirlineModel(hashMapToPieChartModel);
+			airlineModel.setLegendPosition("w");
+			airlineModel.setLegendCols(3);
 			
 			// Umwandlung der HashMap in eine Map mit dem Format Map<String, String>
+			hashMapFromBackend = null; 
+			hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
 			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
 			setDropdown(hashMapToDropdownMap);
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		 }
+		} catch (SQLException e) {
+			System.out.println("Fehler beim Aufrufen des Region-Modells:" +e.getMessage());
+		 }
 	}
 	
 	public void updateChart() {
 		HashMap<String, Integer> hashMapFromBackend;
 		try {
-			hashMapFromBackend = ObjectCreator.getHashMapforAirline(getSelectedCountry());
+			hashMapFromBackend = ObjectCreator.getHashMapforCountry(getSelectedCountry());
 			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
 			hashMapToPieChartModel.setLegendPosition("w");
 			airlineModel = new PieChartModel();
@@ -81,8 +84,7 @@ public class RegionModel {
 			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
 			setDropdown(hashMapToDropdownMap);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Fehler beim Updaten des Region Modells: " +e.getMessage());
 		}
 		
 	}
