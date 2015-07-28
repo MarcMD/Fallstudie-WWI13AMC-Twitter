@@ -21,7 +21,7 @@ public class ObjectCreator {
 		
 		HashMap<String, Integer> testMap=null;
 		try {
-			testMap = getHashMapforCountry("Deutschland");
+			testMap = getHashMapforAirline("Alle");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -29,7 +29,7 @@ public class ObjectCreator {
 		
 		Set keys=null;
 		try {
-			keys = getHashMapforCountry("Deutschland").keySet();
+			keys = getHashMapforAirline("Alle").keySet();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -39,7 +39,7 @@ public class ObjectCreator {
 		while(iterator.hasNext())
 		{
 			String country = (String) iterator.next();
-			System.out.println(country);
+			System.out.print(country +" ");
 			System.out.println(testMap.get((String) country));
 		}
 	}
@@ -55,7 +55,7 @@ public class ObjectCreator {
 		//Am Ende pr�fen ob Auswahl "Alle" zur Verf�gung steht oder ob sie einen anderen Namen hat
 		if(airline.equals("Alle")){
 						
-			String sqlQuery= "SELECT COUNT(*) AS COUNTER, COUNTRY FROM TWEETS_BY_COUNTRY GROUP BY COUNTRY ORDER BY COUNTER DESC";
+			String sqlQuery= "SELECT COUNT(*) AS COUNTER, COUNTRY FROM TWEETS_BY_COUNTRY WHERE COUNTRY IS NOT NULL GROUP BY COUNTRY ORDER BY COUNTER DESC";
 			ResultSet rs = statement.executeQuery(sqlQuery);
 			
 			while(rs.next()){
@@ -66,7 +66,7 @@ public class ObjectCreator {
 			
 		}else{
 		
-		String sqlQuery= "SELECT COUNT(*) AS COUNTER, COUNTRY FROM TWEETS_BY_COUNTRY WHERE AIRLINE='"+ airline +"' GROUP BY COUNTRY ORDER BY COUNTER DESC";
+		String sqlQuery= "SELECT COUNT(*) AS COUNTER, COUNTRY FROM TWEETS_BY_COUNTRY WHERE AIRLINE='"+ airline +"' AND COUNTRY IS NOT NULL GROUP BY COUNTRY ORDER BY COUNTER DESC";
 		
 		ResultSet rs = statement.executeQuery(sqlQuery);
 		
