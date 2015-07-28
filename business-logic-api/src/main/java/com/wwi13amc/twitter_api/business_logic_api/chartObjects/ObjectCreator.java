@@ -86,7 +86,7 @@ public class ObjectCreator {
 		Connection con = DBConnection.getConnection();
 		Statement statement = con.createStatement();
 		
-		if(country.equals("Alle")){
+		if(country.equals("Weltweit")){
 			String sqlQuery= "SELECT COUNT(*) AS COUNTER, AIRLINE FROM TWEETS_BY_COUNTRY GROUP BY AIRLINE ORDER BY COUNTER DESC";
 			
 			ResultSet rs = statement.executeQuery(sqlQuery);
@@ -101,7 +101,7 @@ public class ObjectCreator {
 		}
 		
 		else{
-		String sqlQuery= "SELECT COUNT(*) AS COUNTER, AIRLINE FROM TWEETS_BY_COUNTRY WHERE COUNTRY='"+ country+ "'GROUP BY AIRLINE ORDER BY COUNTER DESC";
+		String sqlQuery= "SELECT COUNT(*) AS COUNTER, AIRLINE FROM TWEETS_BY_COUNTRY WHERE COUNTRY='"+ country+"' GROUP BY AIRLINE ORDER BY COUNTER DESC";
 		
 		ResultSet rs = statement.executeQuery(sqlQuery);
 		
