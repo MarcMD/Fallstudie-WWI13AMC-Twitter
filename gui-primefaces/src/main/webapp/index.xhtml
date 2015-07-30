@@ -6,31 +6,33 @@
 <h:head>
 
 	<title>Twitter Airline Analyzer</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	  <h:outputStylesheet library="css" name="bootstrap.min.css"  />  
+	
+	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800'
 		rel='stylesheet' type='text/css' />
 </h:head>
 
 <h:body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="height:auto">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for ubetter mobile display -->
      <div class="navbar-header">
-     <div class="navbar-brand" title="Twitter Airline Analyzer"><img src="img/twitter_logo.png" height="35px" width="35px" style=" display:inline-block"/></div><h1 style="color:white;  display:inline-block;">Twitter Airline Analyzer</h1></div>
+     <div class="navbar-brand" title="Twitter Airline Analyzer"><img src="img/twitter_logo.png" height="35px" width="35px" style="display:inline-block"/></div><h1 style="color:white; display:inline-block">Twitter Airline Analyzer</h1></div>
     </div>
   </nav>
     <div>
 		<p:tabView dynamic="true" cache="true">
-			<p:tab title="Airlines betrachten" titleStyleClass="bg-color-tab">
+			<p:tab title="Airlines betrachten">
 			<h:form>
 				<h:panelGrid columns="2" cellpadding="10">
 					<p:chart type="pie" model="#{AirlineModel.airlineModel}"
-						style="width:800px;height:600px" id="pie1" responsive="true"  />
+						style="width:800px;height:600px" id="pie1" xdataFormat="value" showDataLabels="true" />
 	
 					<p:selectOneMenu id="region-dropdown-pie1"
 						value="#{AirlineModel.selectedAirline}" effect="fold"
-						editable="false" styleClass="menu" panelStyleClass="panel">
-						<f:selectItem itemLabel="Alle Airlines" itemValue="" />
+						editable="false" styleClass="menu">
+						<f:selectItem itemLabel="Alle Airlines" itemValue="Weltweit" />
 						<f:selectItems value="#{AirlineModel.dropdown}" />
 						<p:ajax event="change" listener="#{AirlineModel.updateChart}"
 							update="pie1" />
@@ -38,7 +40,7 @@
 				</h:panelGrid>
 			</h:form>
 			</p:tab>
-			<p:tab title="Regionen betrachten"  titleStyleClass="bg-color-tab">
+			<p:tab title="Regionen betrachten"  titleStyleClass="tab"  style="background-color:black">
 			<h:form>
 				<h:panelGrid columns="2" cellpadding="11">
 					<p:chart type="pie" model="#{RegionModel.airlineModel}"
@@ -48,7 +50,7 @@
 						value="#{RegionModel.selectedCountry}" effect="fold"
 						editable="false">
 						<p:ajax listener="#{RegionModel.updateChart}" update="pie2" />
-						<f:selectItem itemLabel="Alle Airlines" itemValue="" />
+						<f:selectItem itemLabel="Alle Airlines" itemValue="Alle" />
 						<f:selectItems value="#{RegionModel.dropdown}" />
 					</p:selectOneMenu>
 				</h:panelGrid>

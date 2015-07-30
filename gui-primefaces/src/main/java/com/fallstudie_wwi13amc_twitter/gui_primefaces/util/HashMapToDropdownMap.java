@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 import org.primefaces.model.chart.PieChartModel;
 
@@ -19,6 +20,8 @@ public class HashMapToDropdownMap {
 		for(int i=0; i<listOfKeys.size();i++) {
 			dropdownMap.put(listOfKeys.get(i), listOfKeys.get(i));
 		}
+		
+		dropdownMap = new TreeMap<String, String>(dropdownMap);
 
 		
 		return dropdownMap;

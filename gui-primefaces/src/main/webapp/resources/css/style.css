@@ -53,6 +53,26 @@ html, body {
 	text-decoration:none;
 	}
 	
+	 .navbar {
+ 	background-color:#55acee;
+ }
+ 
+ .navbar-brand { 
+ 	color:white;
+ }
+ 
+ .bg-color-2 {
+ 	background-color:#ccd6dd;
+ }
+ 
+ .bg-color-tab {
+ 	background-color:black;
+ }
+ 
+ body {
+ 	 	background-color:#ccd6dd;
+ }
+	
 .nav a:active {
 	color:#cce3a7;
 	text-decoration:none;
@@ -71,15 +91,6 @@ color: #adaad5;
 	padding-left:1.5%;
 }
 
-.bg-blue {
-	background-color:#40bfbe;
-	color:white; 
-}
-
-
-.bg-orange {
-	background-color:#f05722;
-}
 
 .page {
 	min-height:100%; 
@@ -88,6 +99,6 @@ color: #adaad5;
 	border-style:1px solid black;
 }
 
-#tab {
-	   background-color:yellow;
+a { 
+	color:white;	
 }
