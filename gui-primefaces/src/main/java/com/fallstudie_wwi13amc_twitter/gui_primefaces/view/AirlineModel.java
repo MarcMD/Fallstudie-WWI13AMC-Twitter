@@ -56,8 +56,10 @@ public class AirlineModel {
 		
 			try {
 				
+				// Starte Crawler
 				ThreadHandler threadHandler = new ThreadHandler();
-			 	new TwitterMessageCrawler(threadHandler.airlinesArray);
+				TwitterMessageCrawler crawler = new TwitterMessageCrawler(threadHandler.airlinesArray);
+				crawler.start();
 				
 			 	hashMapFromBackend = ObjectCreator.getHashMapforAirline("Alle");
 				PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
