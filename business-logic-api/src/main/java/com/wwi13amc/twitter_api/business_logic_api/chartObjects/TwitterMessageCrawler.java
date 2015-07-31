@@ -171,7 +171,6 @@ public class TwitterMessageCrawler extends Thread{
 			con.close();
 			System.out.println("Datenbankeintrag erfolgreich: " +identifier + " " + timeZone + " " + airlineCode.substring(1) + " wurde geschrieben");
 		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 	}
 	
