@@ -1,0 +1,5 @@
+package com.wwi13amc.twitter_api.business_logic_api.chartObjects;
+
+public class PerformanceByAirline {
+
+}

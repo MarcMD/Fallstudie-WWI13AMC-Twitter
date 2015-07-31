@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+				<ul class="navbar-ul">
+					<li><a href="">Start</a></li>
+					<li><a href="">Airlines</a></li>
+				</ul>
+		</div>
+		<div class="page">
+			
+		</div>
+
+	</div>
+</body>
+</html>

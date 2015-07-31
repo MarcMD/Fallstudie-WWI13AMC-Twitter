@@ -1,5 +1,25 @@
-INDEX VERSION 1.127+C:\Users\Björn\Documents\GitHub\Fallstudie\Fallstudie-WWI13AMC-Twitter\.metadata\.plugins\org.eclipse.jdt.core
-1038991559.index
-4053306887.index
-45682990.index
-1108496107.index
+INDEX VERSION 1.127+/Users/christiankegelmann/Fallstudie-WWI13AMC-Twitter/.metadata/.plugins/org.eclipse.jdt.core
+2211732093.index
+2456149042.index
+1271342938.index
+3642832561.index
+3794497040.index
+1765565202.index
+4259282187.index
+4276456779.index
+3870899922.index
+411166081.index
+2925560608.index
+1957251224.index
+186905901.index
+238030841.index
+3334248026.index
+2793427791.index
+3348459436.index
+2885545355.index
+2178737305.index
+1542969262.index
+31031388.index
+996996730.index
+3270581164.index
+1769317737.index

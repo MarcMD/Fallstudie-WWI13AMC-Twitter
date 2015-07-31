@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.PieChartModel"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.RequestScoped"/>
+<fullyQualifiedTypeName name="com.wwi13amc.twitter_api.business_logic_api.chartObjects.PerformanceByAirline"/>
+</qualifiedTypeNameHistroy>
