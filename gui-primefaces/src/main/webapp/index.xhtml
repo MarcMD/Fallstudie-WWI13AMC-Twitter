@@ -32,8 +32,8 @@
 					<p:selectOneMenu id="region-dropdown-pie1"
 						value="#{AirlineModel.selectedAirline}" effect="fold"
 						editable="false" styleClass="menu">
-						<f:selectItem itemLabel="Alle Airlines" itemValue="Weltweit" />
-						<f:selectItems value="#{AirlineModel.dropdown}" />
+					<f:selectItem itemLabel="Alle Airlines" itemValue="Alle" />
+					<f:selectItems value="#{AirlineModel.dropdown}" />
 						<p:ajax event="change" listener="#{AirlineModel.updateChart}"
 							update="pie1" />
 					</p:selectOneMenu>
@@ -50,7 +50,7 @@
 						value="#{RegionModel.selectedCountry}" effect="fold"
 						editable="false">
 						<p:ajax listener="#{RegionModel.updateChart}" update="pie2" />
-						<f:selectItem itemLabel="Alle Airlines" itemValue="Alle" />
+						<f:selectItem itemLabel="Alle Regionen" itemValue="Weltweit" />
 						<f:selectItems value="#{RegionModel.dropdown}" />
 					</p:selectOneMenu>
 				</h:panelGrid>

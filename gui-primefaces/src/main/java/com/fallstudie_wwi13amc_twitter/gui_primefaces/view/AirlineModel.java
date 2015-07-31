@@ -87,12 +87,10 @@ public class AirlineModel {
 		try {
 			hashMapFromBackend = ObjectCreator.getHashMapforAirline(getSelectedAirline());
 			PieChartModel hashMapToPieChartModel = HashMapToModel.hashMapToModel(hashMapFromBackend);
-			hashMapToPieChartModel.setLegendPosition("w");
 			airlineModel = new PieChartModel();
 			setAirlineModel(hashMapToPieChartModel);
-			
-			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
-			setDropdown(hashMapToDropdownMap);
+			airlineModel.setLegendPosition("w");
+			airlineModel.setLegendCols(3);
 		} catch (SQLException e) {
 			System.out.println("Fehler bei der SQL-Abfrage zum Updaten des Airline Models:" +e.getMessage());
 		}

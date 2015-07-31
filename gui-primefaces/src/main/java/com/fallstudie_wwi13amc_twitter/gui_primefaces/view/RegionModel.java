@@ -80,6 +80,8 @@ public class RegionModel {
 			hashMapToPieChartModel.setLegendPosition("w");
 			airlineModel = new PieChartModel();
 			setAirlineModel(hashMapToPieChartModel);
+			airlineModel.setLegendPosition("w");
+			airlineModel.setLegendCols(3);
 			
 			Map<String, String> hashMapToDropdownMap = HashMapToDropdownMap.hashMapToDropdownMap(hashMapFromBackend);
 			setDropdown(hashMapToDropdownMap);
