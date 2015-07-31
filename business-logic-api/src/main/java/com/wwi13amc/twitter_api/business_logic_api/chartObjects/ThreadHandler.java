@@ -15,7 +15,7 @@ public class ThreadHandler{
 	 * 
 	 */
 	
-	static String[] airlinesArray;
+	public static String[] airlinesArray;
 	
 	
 	/**
